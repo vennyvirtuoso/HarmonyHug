@@ -5,7 +5,7 @@ from langchain.prompts.chat import ChatPromptTemplate, SystemMessagePromptTempla
 from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
 
-class MentalHealthAssistantChatbot:
+class HarmonyHug:
     def __init__(self, chatbot_type):
         load_dotenv()
         self.api_key = os.environ.get("OPENAI_API_KEY")

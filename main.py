@@ -1,5 +1,5 @@
 import streamlit as st
-from chatbot import MentalHealthAssistantChatbot
+from chatbot import HarmonyHug
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #4CAF50;'>CalmMate: Your Caring Mental Health Companion</h1>", unsafe_allow_html=True)
@@ -18,7 +18,7 @@ def main():
         "Real-time Emotional Support": "emotional_support"
     }
     
-    chatbot = MentalHealthAssistantChatbot(chatbot_type_map[chatbot_type])
+    chatbot = HarmonyHug(chatbot_type_map[chatbot_type])
 
     if "conversation_history" not in st.session_state:
         st.session_state.conversation_history = []
