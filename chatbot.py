@@ -9,7 +9,7 @@ class HarmonyHug:
     def __init__(self, chatbot_type):
         load_dotenv()
         self.api_key = os.environ.get("OPENAI_API_KEY")
-        self.llm = ChatOpenAI(api_key=self.api_key, model="gpt-4o")
+        self.llm = ChatOpenAI(api_key=self.api_key, model="gpt-4")
         self.memory = ConversationBufferMemory(memory_key="chat_history", input_key="text")
         
         # Different templates based on the selected chatbot type
