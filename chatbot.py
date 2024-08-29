@@ -12,7 +12,7 @@ class HarmonyHug:
         self.llm = ChatOpenAI(api_key=self.api_key, model="gpt-4")
         self.memory = ConversationBufferMemory(memory_key="chat_history", input_key="text")
         
-        # Templates for stress management and CBT (anxiety)
+        # Define templates for stress management and CBT (anxiety)
         templates = {
             "cbt": """
             You are a Cognitive Behavioral Therapy (CBT) assistant. Your role is to:
@@ -50,4 +50,10 @@ class HarmonyHug:
         )
         
     def get_reply(self, human_message):
-        return self.chain.run({"text": human_message})
+        generation_args = {
+            "max_new_tokens": 500,  # Set max new tokens to 500
+            "return_full_text": False,
+            "temperature": 0.0,
+            "do_sample": False,
+        }
+        return self.chain.run({"text": human_message}, **generation_args)
