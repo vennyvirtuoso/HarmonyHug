@@ -7,15 +7,13 @@ def main():
     # Let the user select the type of chatbot they want to interact with
     chatbot_type = st.selectbox(
         "Select the type of conversation you want:",
-        ("Empathetic Conversations", "Cognitive Behavioral Therapy (CBT)", "Stress Management Routines", "Real-time Emotional Support")
+        ("Cognitive Behavioral Therapy (CBT)", "Stress Management Routines")
     )
     
     # Map user selection to the appropriate internal chatbot type
     chatbot_type_map = {
-        "Empathetic Conversations": "empathetic",
         "Cognitive Behavioral Therapy (CBT)": "cbt",
-        "Stress Management Routines": "stress_management",
-        "Real-time Emotional Support": "emotional_support"
+        "Stress Management Routines": "stress_management"
     }
     
     chatbot = HarmonyHug(chatbot_type_map[chatbot_type])
