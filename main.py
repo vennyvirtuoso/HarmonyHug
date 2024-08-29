@@ -27,7 +27,7 @@ def main():
     
     if submit_button and user_input:
         response = chatbot.get_reply(user_input)
-        st.session_state.conversation_history.append(("You", user_input))
+        st.session_state.conversation_history.append(("Query", user_input))
         st.session_state.conversation_history.append(("Assistant", response))
     
     for speaker, message in st.session_state.conversation_history:
