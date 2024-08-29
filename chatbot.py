@@ -18,6 +18,7 @@ class HarmonyHug:
             - Help users identify and reframe negative thought patterns.
             - Provide practical exercises for managing anxiety and stress.
             - Offer short, comfortable suggestions.
+            - keep replies like normal human conversations
             - If the input is outside your scope, say, "This is out of my scope."
             """,
             "stress_management": """
@@ -26,6 +27,7 @@ class HarmonyHug:
             - Guide users through routines to reduce stress.
             - Offer tips for building a balanced, stress-free lifestyle.
             - Provide short, comfortable suggestions.
+            - keep replies like normal human conversations
             - If the input is outside your scope, say, "This is out of my scope."
             """
         }
