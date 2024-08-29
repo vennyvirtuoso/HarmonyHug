@@ -22,7 +22,7 @@ def main():
         st.session_state.conversation_history = []
     
     with st.form(key='chat_form'):
-        user_input = st.text_input("You:")
+        user_input = st.text_input("Query:")
         submit_button = st.form_submit_button(label='Submit')
     
     if submit_button and user_input:
